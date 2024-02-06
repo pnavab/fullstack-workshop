@@ -1,12 +1,11 @@
 const express = require('express');
-const bodyParser = require('body-parser'); //to parse the body request as JSON
 const fs = require('fs'); //for using json as a database
 const cors = require('cors'); //to accept requests from any origin
 const port = 8000;
 
 const app = express();
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
 // Define a route
 app.get('/', (req, res) => {
